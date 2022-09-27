@@ -535,3 +535,82 @@ Completed 200 OK in 4.3ms (Views: 3.6ms | ActiveRecord: 0.2ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2022-09-27 16:44:59 +0530
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-09-27 16:47:07 +0530
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` 
+  Rendered users/index.html.erb within layouts/application (0.8ms)
+Compiled application.js  (0ms)  (pid 99800)
+Completed 200 OK in 11.2ms (Views: 10.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2022-09-27 16:47:07 +0530
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2022-09-27 16:47:10 +0530
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (1.3ms)
+  Rendered users/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 5.4ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2022-09-27 16:47:10 +0530
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-09-27 16:47:30 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GZiF5Mg1StnDX4swDptR37D8CrwiKzxyvmweUh653fI=", "user"=>{"name"=>"aaditya", "email"=>"jain.aadi23@gmail.com"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `users` (`created_at`, `email`, `name`, `updated_at`) VALUES ('2022-09-27 11:17:30', 'jain.aadi23@gmail.com', 'aaditya', '2022-09-27 11:17:30')
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 2.4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2022-09-27 16:47:30 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 4.2ms (Views: 3.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2022-09-27 16:47:30 +0530
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-09-27 16:47:31 +0530
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+  Rendered users/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 5.0ms (Views: 4.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2022-09-27 16:47:31 +0530
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2022-09-27 16:47:34 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 4.0ms (Views: 3.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2022-09-27 16:47:34 +0530
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-09-27 16:47:37 +0530
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+  Rendered users/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 4.7ms (Views: 4.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2022-09-27 16:47:37 +0530
+Served asset /application.js - 304 Not Modified (0ms)
