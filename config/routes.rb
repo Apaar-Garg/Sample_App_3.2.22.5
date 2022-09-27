@@ -1,4 +1,7 @@
 SampleApp32225::Application.routes.draw do
+  resources :users
+
+
   match '/', :to => "Application#hello"
   #root 'application#hello'
   # The priority is based upon order of creation:
